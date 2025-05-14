@@ -1,0 +1,55 @@
+# OFFLINE WEBSITE CHATBOT REQUIREMENTS
+
+## Core Dependencies
+# Backend
+express==4.18.2               # Web server
+socket.io==4.7.2              # WebSockets for real-time communication
+cors==2.8.5                   # Cross-origin resource sharing
+body-parser==1.20.2           # Request body parsing
+dotenv==16.3.1                # Environment variable management
+
+# LLM Integration
+node-fetch==3.3.2             # HTTP requests to Ollama
+ws==8.14.2                    # WebSocket client
+
+# Document Processing
+pdf-parse==1.1.1              # PDF text extraction
+mammoth==1.6.0                # DOCX processing
+xlsx==0.18.5                  # Excel file processing
+csv-parser==3.0.0             # CSV processing
+
+# Vector Database
+chromadb==0.4.18              # Vector storage for document embeddings
+
+# Audio Processing
+whisper==1.0.0                # Speech recognition
+edge-tts==6.1.9               # Text-to-speech (alternative)
+piper-tts==0.0.2              # Offline TTS
+
+# Utilities
+natural==6.8.0                # NLP utilities
+date-fns==2.30.0              # Date/time parsing
+crypto-js==4.2.0              # Encryption
+uuid==9.0.1                   # Unique ID generation
+markdown-it==13.0.1           # Markdown parsing
+file-type==18.7.0             # File type detection
+
+## Development Dependencies
+nodemon==3.0.1                # Auto-restart server during development
+webpack==5.89.0               # Module bundler
+webpack-cli==5.1.4            # Webpack command line
+babel==7.23.2                 # JavaScript transpiler
+eslint==8.54.0                # Code linting
+jest==29.7.0                  # Testing
+
+## Note: Actual installation command for Node.js
+# npm install express socket.io cors body-parser dotenv node-fetch ws pdf-parse mammoth xlsx csv-parser natural date-fns crypto-js uuid markdown-it file-type
+
+## Note: For ChromaDB, Whisper and other Python dependencies
+# pip install chromadb whisper edge-tts piper-tts
+
+## Front-end Libraries (to be included via CDN or npm)
+# - Marked.js (Markdown rendering)
+# - Highlight.js (Code syntax highlighting)
+# - Web Speech API (Browser native voice capability)
+# - PDF.js (PDF rendering in browser)

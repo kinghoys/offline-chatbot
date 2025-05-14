@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline AI Chatbot Widget</title>
+    <link rel="stylesheet" href="css/chatbot-widget.css">
+</head>
+<body>
+    <!-- This file is for testing and development purposes -->
+    <div class="content">
+        <h1>Chatbot Widget Test Page</h1>
+        <p>This page is for testing the chatbot widget in isolation.</p>
+    </div>
+
+    <!-- The chatbot widget will be injected here -->
+    <script src="js/integrations/ollama-client.js"></script>
+    <script src="js/chatbot-widget.js"></script>
+    <script>
+        // Initialize the chatbot
+        document.addEventListener('DOMContentLoaded', function() {
+            OfflineAIChatbot.init({
+                position: 'right', // 'right' or 'left'
+                primaryColor: '#3a76f8',
+                welcomeMessage: 'Hello! I am your AI assistant. How can I help you today?',
+                title: 'AI Assistant'
+            });
+        });
+    </script>
+</body>
+</html>

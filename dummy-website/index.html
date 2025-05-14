@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSolutions - Your IT Partner</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- This is where we'll add our chatbot script later -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">TechSolutions</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Innovative IT Solutions for Your Business</h1>
+            <p>We help companies transform through technology with our expert services and support.</p>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="images/web-dev.png" alt="Web Development">
+                <h3>Web Development</h3>
+                <p>Custom websites and web applications designed for your specific business needs.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/cloud.png" alt="Cloud Solutions">
+                <h3>Cloud Solutions</h3>
+                <p>Secure and scalable cloud infrastructure to power your business operations.</p>
+            </div>
+            <div class="service-card">
+                <img src="images/cybersecurity.png" alt="Cybersecurity">
+                <h3>Cybersecurity</h3>
+                <p>Protect your business with our comprehensive security solutions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About TechSolutions</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Founded in 2010, TechSolutions has been helping businesses leverage technology to achieve their goals. Our team of experts is dedicated to delivering high-quality solutions tailored to your needs.</p>
+                <p>We believe in building long-term relationships with our clients through transparency, reliability, and excellence in everything we do.</p>
+            </div>
+            <div class="about-image">
+                <img src="images/team.png" alt="Our Team">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">TechSolutions</div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p>Email: info@techsolutions.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Address: 123 Tech Street, Silicon Valley, CA 94024</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 TechSolutions. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <!-- Mammoth.js for DOCX processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.21/mammoth.browser.min.js"></script>
+    <!-- PDF.js for PDF processing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script>
+        // Set worker path for PDF.js
+        if (window.pdfjsLib) {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js';
+        }
+    </script>
+    <!-- Chatbot widget -->
+    <script src="../chatbot/js/chatbot-embed.js" 
+            data-primary-color="#3498db" 
+            data-position="right" 
+            data-welcome-message="Hello! Welcome to TechSolutions. How can I assist you today?" 
+            data-title="TechSolutions Assistant">
+    </script>
+</body>
+</html>

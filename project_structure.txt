@@ -1,0 +1,75 @@
+# OFFLINE WEBSITE CHATBOT PROJECT STRUCTURE
+
+## Root Directory: /offline-chatbot/
+
+### Frontend (Client)
+- /frontend/
+  - /public/             # Static assets
+    - /css/              # Stylesheets
+      - main.css         # Main stylesheet
+      - themes.css       # Theming options
+    - /js/
+      - chat-widget.js   # Main widget logic
+      - ui-controller.js # UI event handlers
+      - llm-client.js    # Client for LLM communication
+      - document-handler.js # Document upload and processing
+      - voice-interface.js # Voice input/output
+      - task-manager.js  # Task and reminder system
+    - /assets/
+      - /icons/          # UI icons
+      - /audio/          # Audio alerts/notifications
+    - embed.js           # Single file for website embedding
+  - /index.html          # Demo page
+  - /dummy-website.html  # Test website for integration
+
+### Backend (Server)
+- /backend/
+  - /server.js           # Main Express server
+  - /routes/             # API routes
+    - api.js             # API endpoints
+    - websockets.js      # WebSocket handlers
+  - /controllers/        # Business logic
+    - llm-controller.js  # LLM integration
+    - document-controller.js # Document processing
+    - voice-controller.js # Voice processing
+    - task-controller.js # Task management
+  - /services/           # Core services
+    - ollama-service.js  # Ollama integration
+    - vectordb-service.js # Vector database (ChromaDB)
+    - file-service.js    # File system operations
+    - whisper-service.js # Audio transcription
+  - /utils/              # Utility functions
+    - parser.js          # Text and command parsing
+    - encryption.js      # Data encryption
+    - logger.js          # Logging functionality
+  - /config/             # Configuration files
+    - default.js         # Default settings
+    - models.js          # LLM model configurations
+
+### Database/Storage
+- /data/                 # Local data storage
+  - /documents/          # Processed documents
+  - /embeddings/         # Vector embeddings
+  - /transcripts/        # Meeting transcripts
+  - /chat-history/       # Conversation logs
+  - /tasks/              # Stored tasks and reminders
+
+### Documentation
+- /docs/                 # Documentation
+  - README.md            # Project overview
+  - INSTALLATION.md      # Setup instructions
+  - USAGE.md             # Usage guide
+  - ARCHITECTURE.md      # Architecture details
+
+### Development
+- /package.json          # Node.js dependencies
+- /.env.example          # Example environment variables
+- /.gitignore            # Git ignore file
+- /webpack.config.js     # For bundling frontend
+
+## Key Files to Start With
+1. package.json - Dependencies and scripts
+2. backend/server.js - Express server setup
+3. frontend/public/js/chat-widget.js - Basic chat UI
+4. frontend/embed.js - Website embedding script
+5. frontend/dummy-website.html - Test website
